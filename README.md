@@ -18,11 +18,11 @@
   2. Run `npm run dev`
 
 ### General principles of architecture
-- [x] Feature-based structure
-- [x] Clean Architecture (domain / application / infrastructure presentation)
-- [x] Server state ≠ Client state
-- [x] High scalability
-- [x] High testability
+-  Feature-based structure
+-  Clean Architecture (domain / application / infrastructure presentation)
+-  Server state ≠ Client state
+-  High scalability
+-  High testability
 
 ### Final result
 - Enterprise architecture:
