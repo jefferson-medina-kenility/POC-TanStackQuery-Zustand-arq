@@ -1,15 +1,16 @@
 import './App.css'
+import { UserItem } from './features/users/presentation/components/UserItem'
 import { CreateUserPage } from './features/users/presentation/pages/CreateUserPage'
 import { EditUserPage } from './features/users/presentation/pages/EditUserPage'
 import { UsersPage } from './features/users/presentation/pages/UsersPage'
 
 function App() {
-
-  const userId = "1"
-  const initialName = "Jefferson"
-  const initialEmail = "jefferson.medina@tempo.com"
+  const userId = "2"
+  const initialName = "manuela"
+  const initialEmail = "manuela.medina@tempo.com"
 
   return <>
+    <UserItem  id={userId}  name={initialName} />
     <EditUserPage 
       userId={userId} 
       initialName={initialName} 
