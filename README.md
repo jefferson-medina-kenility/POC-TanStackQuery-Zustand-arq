@@ -1,3 +1,13 @@
+### How to install de application
+- json server backend mock
+  1. you have to install npx
+  2. Run `npx json-server --watch data/db.json --routes routes.json`
+  3. The db.json files contents user json mock
+
+- Frontend app
+  1. Run `npm install`
+  2. Run `npm run dev`
+
 ### General principles of architecture
 - [x] Feature-based structure
 - [x] Clean Architecture (domain / application / infrastructure presentation)
