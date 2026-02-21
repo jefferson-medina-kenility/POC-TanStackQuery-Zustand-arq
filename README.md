@@ -94,7 +94,7 @@
 
  - light/dark theme, form state, modals, and other states that do not come from an API.
 
- ### Use both?
+ ### You can use both depends of the problem
 
 - Yes, many teams do
 
