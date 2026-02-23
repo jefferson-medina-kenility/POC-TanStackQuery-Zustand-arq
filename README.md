@@ -4,6 +4,8 @@
 - Zustand
 - Clean Architecture + Feature-Based + Separation of concerns
 
+Check out Link IA, to develop the scaffolding of code [here](https://https://chatgpt.com/share/6994b4b3-e3ac-8010-8ef5-119d14dd0b04).
+
 **This architecture is designed for large, real-world apps (SaaS, fintech, dashboards, etc.).**
 
 ### How to install de application
