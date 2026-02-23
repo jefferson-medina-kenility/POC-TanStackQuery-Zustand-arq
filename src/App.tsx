@@ -10,6 +10,9 @@ function App() {
   const initialEmail = "manuela.medina@tempo.com"
 
   return <>
+    <div className="bg-blue-500 text-white p-6">
+      Tailwind funcionando 🚀
+    </div>
     <UserItem  id={userId}  name={initialName} />
     <EditUserPage 
       userId={userId} 

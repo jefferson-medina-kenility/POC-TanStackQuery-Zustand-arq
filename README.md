@@ -2,7 +2,6 @@
 - React 18+
 - TanStack Query v5
 - Zustand
-- Zustand
 - Clean Architecture + Feature-Based + Separation of concerns
 
 **This architecture is designed for large, real-world apps (SaaS, fintech, dashboards, etc.).**
@@ -16,6 +15,37 @@
 - Frontend app
   1. Run `npm install`
   2. Run `npm run dev`
+
+## How to install TailWind CSS
+
+1. npm install -D tailwindcss@3 postcss autoprefixer
+2. npx tailwindcss init -p
+  - The command `npx tailwindcss init -p` should create the files `postcss.config.js` and `tailwind.config.js`. 
+    If it creates them with the "*.js" extension, rename the extension to cjs.
+
+    ## postcss.config.cjs contains:
+    \```typescript
+    module.exports = {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    }
+    \```
+
+    ## tailwind.config.cjs contains:
+    \```typescript
+    export default {
+      content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+      ],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+    }
+    \```
 
 ### General principles of architecture
 -  Feature-based structure
