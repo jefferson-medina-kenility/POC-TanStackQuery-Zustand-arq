@@ -24,17 +24,16 @@
     If it creates them with the "*.js" extension, rename the extension to cjs.
 
     ## postcss.config.cjs contains:
-    \```typescript
+    ```typescript
     module.exports = {
       plugins: {
         tailwindcss: {},
         autoprefixer: {},
       },
     }
-    \```
-
-    ## tailwind.config.cjs contains:
-    \```typescript
+    ```
+    ## tailwind.config contains:
+   ```typescript
     export default {
       content: [
         "./index.html",
@@ -45,7 +44,7 @@
       },
       plugins: [],
     }
-    \```
+   ```
 
 ### General principles of architecture
 -  Feature-based structure
