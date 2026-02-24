@@ -23,26 +23,53 @@ export const EditUserPage = () => {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center">
-      <form onSubmit={handleSubmit}>
-        <input
-          name="username"
-          value={nameuser}
-          onChange={e => setName(e.target.value)}
-          className="px-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-        />
-
-        <input
-          name="email"
-          value={emailuser}
-          onChange={e => setEmail(e.target.value)}
-          className="px-2 py-1 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-        />
-
-        <button disabled={isPending} className="font-medium text-blue-600">
-          {isPending ? 'Updating...' : 'Update'}
-        </button>
-      </form>
+    <div className="min-h-screen p-6 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-gray-800">User edit</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nombre">
+              Name
+            </label>
+            <input
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={nameuser}
+              onChange={e => setName(e.target.value)}
+              id="name"
+              type="text"
+              placeholder="name"
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+              Email
+            </label>
+            <input
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={emailuser}
+              onChange={e => setEmail(e.target.value)}
+              id="email"
+              type="email"
+              placeholder="correo@ejemplo.com"
+            />
+          </div>
+          <div className="flex justify-between gap-4">
+            <button
+              onClick={() => navigate('/')}
+              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition duration-200"
+              type="button"
+            >
+              Back
+            </button>
+            <button
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200"
+              type="submit"
+            >
+              {isPending ? 'Updating...' : 'Update'}
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
