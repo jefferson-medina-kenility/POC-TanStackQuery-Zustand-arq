@@ -48,7 +48,7 @@ export const CreateUserPage = () => {
           </div>
           <div className="flex justify-between gap-4">
             <button
-             onClick={() => navigate('/')}
+              onClick={() => navigate('/')}
               className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition duration-200"
               type="button"
             >

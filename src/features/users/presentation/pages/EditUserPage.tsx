@@ -11,7 +11,6 @@ export const EditUserPage = () => {
   const [emailuser, setEmail] = useState(email)
   const navigate = useNavigate();
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
