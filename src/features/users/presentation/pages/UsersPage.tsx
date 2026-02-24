@@ -17,7 +17,8 @@ export const UsersPage =
 
 
     return (
-      <div className="flex flex-col">
+      <div className="flex h-screen items-center justify-center">
+      <div className="flex flex-col ">
         <button className="font-medium text-blue-600 hover:underline"  onClick={() => navigate('/create')}>
           Create user
         </button>
@@ -60,6 +61,7 @@ export const UsersPage =
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

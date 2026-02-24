@@ -16,6 +16,7 @@ export const CreateUserPage = () => {
   }
 
   return (
+    <div className="flex h-screen items-center justify-center">
     <form onSubmit={handleSubmit}>
       <input
         value={name}
@@ -32,8 +33,9 @@ export const CreateUserPage = () => {
       />
       &nbsp;
       <button disabled={isPending} className="font-medium text-blue-600">
-        {isPending ? 'Creating...' : 'Create User'}
+        {isPending ? 'Saving...' : 'Save User'}
       </button>
     </form>
+    </div>
   )
 }
