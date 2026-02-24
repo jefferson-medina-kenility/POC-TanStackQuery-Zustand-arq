@@ -2,22 +2,16 @@ import { useDeleteUser } from '../hooks/useDeleteUser'
 
 interface Props {
   id: string
-  name: string
 }
 
-export const UserItem = ({ id, name }: Props) => {
+export const UserItem = ({ id }: Props) => {
   const { mutate, isPending } = useDeleteUser()
-
+  
   return (
-    <div>
-      <span>{name}</span>
-
-      <button
-        onClick={() => mutate(id)}
-        disabled={isPending}
-      >
-        {isPending ? 'Deleting...' : 'Delete'}
-      </button>
-    </div>
+    <button className="font-medium text-red-600 hover:underline"
+      onClick={() => mutate(id)}
+      disabled={isPending}>
+      {isPending ? 'Deleting...' : 'Delete'}
+    </button>
   )
 }

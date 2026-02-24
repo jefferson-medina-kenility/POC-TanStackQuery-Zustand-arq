@@ -1,25 +1,17 @@
+
 import './App.css'
-import { UserItem } from './features/users/presentation/components/UserItem'
 import { CreateUserPage } from './features/users/presentation/pages/CreateUserPage'
-import { EditUserPage } from './features/users/presentation/pages/EditUserPage'
 import { UsersPage } from './features/users/presentation/pages/UsersPage'
+import { EditUserPage } from './features/users/presentation/pages/EditUserPage'
+import useUserStore from './features/users/presentation/pages/store'
 
 function App() {
-  const userId = "2"
-  const initialName = "manuela"
-  const initialEmail = "manuela.medina@tempo.com"
-
+  const {idname,username,email} = useUserStore((state) => state);
   return <>
-    <div className="bg-blue-500 text-white p-6">
-      Tailwind funcionando 🚀
-    </div>
-    <UserItem  id={userId}  name={initialName} />
-    <EditUserPage 
-      userId={userId} 
-      initialName={initialName} 
-      initialEmail={initialEmail} />
-    <CreateUserPage />
-    <UsersPage />
+
+      <EditUserPage userId={idname} initialName={username} initialEmail={email} />
+      <CreateUserPage />
+      <UsersPage />
   </>
 
 }
